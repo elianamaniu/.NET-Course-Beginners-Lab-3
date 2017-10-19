@@ -1,4 +1,5 @@
 ﻿using Lab3.Enums;
+using Lab3.Methods;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,34 @@ namespace Lab3
         static void Main(string[] args)
         {
         }
+
+        #region Methods and Params
+
+        public void WorkingWithParams()
+        {
+            var workingWithMethodsAndParams = new WorkingWithMethodsAndParams();
+
+            double average;
+            average = workingWithMethodsAndParams.CalculateAverage(4.0, 3.2, 5.7, 64.22, 87.2);
+            Console.WriteLine("Average of data is: {0}", average);
+
+            double[] data = { 4.0, 3.2, 5.7 };
+            average = workingWithMethodsAndParams.CalculateAverage(data);
+            Console.WriteLine("Average of data is: {0}", average);
+        }
+
+        public void WorkingWithDefaultValues()
+        {
+            var workingWithMethodsAndParams = new WorkingWithMethodsAndParams();
+
+            workingWithMethodsAndParams.DisplayWithOptionalParameters();
+
+            workingWithMethodsAndParams.DisplayWithOptionalParameters(4);
+
+            workingWithMethodsAndParams.DisplayWithOptionalParameters(2, "My message");
+        }
+
+        #endregion Methods and Params
 
         #region Enum Work
 
